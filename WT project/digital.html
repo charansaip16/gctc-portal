@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--
+    Author  : Charan sai and Pranay kumar 
+    Aim     : Major difference between gctc actual portal and mode;
+    Date    : 2/5/2022
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geetanjali </title>
+    <!--<link rel="stylesheet" type="text/css" href="index.css">-->
+        <style type="text/css">
+       
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+
+        nav
+        {
+            width: 100%;
+            background: whitesmoke;
+            overflow: auto;
+        }
+
+       .heading
+        {
+            padding: 0;
+            margin: 0 0 0 150px;
+            justify-content: center;
+            list-style: none;
+        }
+
+       .heading li
+        {
+            float: left;
+            list-style: none;    
+        }
+
+       .list
+        {
+            float: left;
+            list-style: none;    
+        }
+
+       .heading li a
+        {
+            text-decoration: none;
+            color: black;
+        }
+       nav a
+        {
+            width: 120px;
+            height: 25px;
+            display: block;
+            padding: 15px 25px;
+            font-family: "Times New Roman", Times, serif;
+            color: black;
+            text-align: center;
+        }
+
+       .heading li a::after
+       {
+            content: ' ';
+            width: 0;
+            height: 4px;
+            background-color: coral;
+            margin: auto;
+            display: block;
+       }
+
+       .heading li a:hover
+       {
+            color: orangered;
+       }
+
+       .heading li a:hover::after
+       {
+            width: 100%;
+            transition: width 0.2s linear;
+       }
+
+       .footer-container
+        {
+            background-color: black;
+            padding-bottom: 4rem;
+            padding: 2rem 0 4rem 0;
+        }
+
+        .footer
+        {
+            width: 95%;
+            height: 20%;
+            bottom: 5px;
+            text-align: left;
+    /**background-color: burlywood;**/
+            color: white;
+            display: inline-flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .footer-heading
+        {
+            display: flex;
+            flex-direction: column;
+            margin-right: 4rem;
+            color: orangered;
+        }
+
+        .footer-heading h2
+        {
+            margin-bottom: 2rem;
+            font-family: arial;
+            font-style: bold;
+        }
+
+        .footer-heading a
+        {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-heading a:hover
+        {
+            color: red;
+            transition: 0.3s  ease-out;
+        }
+
+        .footer-heading ul li
+        {
+            display: flex;
+            width: 20px;
+            height: 10px;
+            text-align: center;
+            background: black;
+            border-radius: 100%;
+            margin: 2px 10px;
+        }
+
+        .btn2{
+           width: 110px;
+           height: 40px;
+           border: none;
+           color: black;
+           background-color:aqua;
+           border-radius: 10px;
+           box-shadow: inset 0 0 0 0 yellow;
+           transition: ease-out 0.3s;
+           font-size: 15px;
+           outline: none;
+        }
+
+        .btn2:hover{
+            box-shadow: inset 111px 0 0 0 yellow;
+            cursor: pointer;
+            color: black;
+        }
+
+        .heading2{
+            color: blueviolet;
+            padding: 20px;
+        }
+   </style>
+</head>
+    <body>
+        <div>
+            <nav>
+                <ul class="heading" >
+                    <li><a href="index.html"><img src="logo.jpg" style="width:110px;height:25px;"></a></li>
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="register.html">Register  </a></li>
+                    <li><a href="notifications.html">Notifications  </a></li>
+                    <li><a href="placement.html">Placment details </a></li>
+                    <li><a href="digital.html">Digital library </a></li>
+                    <li><a href="contact.html">Contact us  </a></li>
+                </ul>
+            </nav>
+        </div>
+
+<!--
+       content  
+-->
+
+        <h1>Digital Library  </h1>
+        <h2 class="heading2">First Year </h2>
+        <table align="center">
+            <tr>
+                <td colspan="2" width="400px" height="50px"><h1 style="color: red;"> PPS-1</h1> </td>
+                <td colspan="2" width="400px" height="50px"><h1 style="color: red;"> BEE</h1></td>
+            </tr>
+            <tr>
+                <td rowspan="2" height="250px" width="200px" align="center"><img src="cover6.png"> </td>
+                <th> <a href="PPS-I Course File 2020-21 Ist Sem.pdf"><button class="btn2" >View</button> </a></th>
+                <td rowspan="2" height="250px" width="200px" align="center"><img src="cover6.png"> </td>
+                <th> <a href="BEE COURSE FILE.pdf"><button class="btn2" >View</button>  </a></th>
+            </tr>
+            <tr>
+                <th><a href="PPS-I Course File 2020-21 Ist Sem.pdf" download="PPs.pdf"><button class="btn2" >Download</button></a></th>
+                <th><a href="BEE COURSE FILE.pdf" download="BEE.pdf"><button class="btn2" >Download</button></a></th>
+            </tr>
+        </table>
+        <h2 class="heading2">Second Year </h2>
+        <table align="center">
+        <tr>
+            <td colspan="2" width="400px" height="50px"><h1 style="color: red;"> PPS-2</h1> </td>
+            <td colspan="2" width="400px" height="50px"><h1 style="color: red;"> M2</h1></td>
+        </tr>
+        <tr>
+            <td rowspan="2" height="250px" width="200px" align="center"><img src="cover6.png"> </td>
+            <th> <a href="PPS-II COURSE FILE_SEMESTER II _2020-21_final.pdf"><button class="btn2" >View</button> </a></th>
+            <td rowspan="2" height="250px" width="200px" align="center"><img src="cover6.png"> </td>
+            <th> <a href="MVC(M2)_Coursefile_2020-21_IT (1).pdf"><button class="btn2" >View</button>  </a></th>
+        </tr>
+        <tr>
+            <th><a href="PPS-II COURSE FILE_SEMESTER II _2020-21_final.pdf" download="PPS-2.pdf"><button class="btn2" >Download</button></a></th>
+            <th><a href="MVC(M2)_Coursefile_2020-21_IT (1).pdf" download="M2.pdf"><button class="btn2" >Download</button></a></th>
+        </tr>
+        </table>
+        <h2 class="heading2">Third Year </h2>
+
+        <table align="center">
+        <tr>
+            <td colspan="2" width="400px" height="50px"><h1 style="color: red;">DS</h1> </td>
+        </tr>
+        <tr>
+            <td rowspan="2" height="250px" width="200px" align="center"><img src="cover6.png"> </td>
+            <th> <a href="CSE (DS) EC COURSE FILE 2020-21.pdf"><button class="btn2" >View</button> </a></th>
+        </tr>
+        <tr>
+            <th><a href="CSE (DS) EC COURSE FILE 2020-21.pdf" download="Ds.pdf"><button class="btn2" >Download</button></a></th>
+        </tr>
+
+        </table> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer">
+                        <div class="footer-heading footer-1">
+                                <h2>Useful Information </h2>
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSccR1Uayj6I9i7uzFEa9rrR3LBg_hehKPRMLdXvuhGgyfx32g/viewform">Resume Generator </a>
+                                    <a href="http://www.geethanjaliinstitutions.com/engineering/img/downloads/B.Tech%20Academic%20Calendar%20II,%20III&IV%20year%202021-22.pdf">Acadamic Calender</a>
+                                    <a href="https://www.gctcportal.in/p/syllabus.html">Syllabus  </a>
+                                    <a href="https://www.gctcportal.in/p/fee-particulars.html">Fee particulars </a>
+                                    <a href="https://www.gctcportal.in/p/programmes-offered-by-college.html">Intake </a>
+                                    <a href="https://www.gctcportal.in/p/library.html">Library zone </a>
+                                    <a href="https://www.gctcportal.in/p/academic-overview.html">Academic Overiew </a>
+                        </div>
+
+                        <div class="footer-heading footer-2">
+                            <h2>Reference sites </h2>
+                                <a href="https://geethanjaliinstitutions.com/">Geetanjali institution </a>
+                                <a href="https://jntuh.ac.in/">JNTU Hyderabad </a>
+                        </div>
+
+
+                        <div class="footer-heading footer-3" align="center">
+                            <h2>Social media  </h2>
+                                <ul>
+                                    <li class="list">
+                                        <a class="social"href="https://www.facebook.com/groups/gctcportal " target="_blank">
+                                            <ion-icon name="logo-facebook"></ion-icon>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list">
+                                        <a href="https://www.youtube.com/user/GCTCPORTAL" target="_blank" >
+                                            <ion-icon name="logo-youtube"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="https://www.instagram.com/accounts/login/?next=/gctcportal/" target="_blank">
+                                            <ion-icon name="logo-instagram"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="https://twitter.com/GCTCPORTAL" target="_blank">
+                                            <ion-icon name="logo-twitter"></ion-icon>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>

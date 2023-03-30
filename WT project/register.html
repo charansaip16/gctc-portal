@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--
+    Author  : Divin
+    Aim     : To make a form to take input from the user 
+    Date    : 2/5/2022
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geetanjali </title>
+    <!--<link rel="stylesheet" type="text/css" href="index.css">-->
+        <style type="text/css">
+
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+
+        nav
+        {
+            width: 100%;
+            background: whitesmoke;
+            overflow: auto;
+        }
+
+       .heading
+        {
+            padding: 0;
+            margin: 0 0 0 150px;
+            justify-content: center;
+            list-style: none;
+        }
+
+       .heading li
+        {
+            float: left;
+            list-style: none;    
+        }
+
+       .list
+        {
+            float: left;
+            list-style: none;    
+        }
+
+       .heading li a
+        {
+            text-decoration: none;
+            color: black;
+        }
+       nav a
+        {
+            width: 120px;
+            height: 25px;
+            display: block;
+            padding: 15px 25px;
+            font-family: "Times New Roman", Times, serif;
+            color: black;
+            text-align: center;
+        }
+
+       .heading li a::after
+       {
+            content: ' ';
+            width: 0;
+            height: 4px;
+            background-color: coral;
+            margin: auto;
+            display: block;
+       }
+
+       .heading li a:hover
+       {
+            color: orangered;
+       }
+
+       .heading li a:hover::after
+       {
+            width: 100%;
+            transition: width 0.2s linear;
+       }
+
+       .footer-container
+        {
+            background-color: black;
+            padding-bottom: 4rem;
+            padding: 2rem 0 4rem 0;
+        }
+
+        .footer
+        {
+            width: 95%;
+            height: 20%;
+            bottom: 5px;
+            text-align: left;
+    /**background-color: burlywood;**/
+            color: white;
+            display: inline-flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .footer-heading
+        {
+            display: flex;
+            flex-direction: column;
+            margin-right: 4rem;
+            color: orangered;
+        }
+
+        .footer-heading h2
+        {
+            margin-bottom: 2rem;
+            font-family: arial;
+            font-style: bold;
+        }
+
+        .footer-heading a
+        {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-heading a:hover
+        {
+            color: red;
+            transition: 0.3s  ease-out;
+        }
+
+        .footer-heading ul li
+        {
+            display: flex;
+            width: 20px;
+            height: 10px;
+            text-align: center;
+            background: black;
+            border-radius: 100%;
+            margin: 2px 10px;
+        }
+
+        .body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form{
+            width: 360px;
+            padding: 4rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(92, 99, 105, .2);
+        }
+
+        .title{
+            font-weight: 400;
+            margin-bottom: 3rem;
+        }
+
+        .formd{
+            position: relative;
+            height: 48px;
+            margin-bottom: 1.5rem;
+        }
+
+        .formi{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 100%;
+            font-size: 1rem;
+            border: 1px solid white;
+            border-radius: .5rem;
+            outline: none;
+            padding: 0;
+            background: none;
+            z-index: 1;
+        }
+
+        .forml{
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            padding: 0 .25rem;
+            background-color: white;
+            color: gray;
+            font-size: 1rem;
+            transition: .3s;
+
+        }
+
+        .formb{
+            display: block;
+            position: relative;
+            margin-left: auto;
+            padding: 1rem 4rem;
+            outline: none;
+            border: none;
+            background-color: coral;
+            color: white;
+            font-size:1rem ;
+            border-radius: .5rem;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .formb:hover{
+            box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+        }
+
+        .formi:focus + .forml{
+            top: -.5rem;
+            left: .8rem;
+            color: coral;
+            font-size: .75reml;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        .formi:not(:placeholder-shown).formi:not(:focus)+ .forml{
+            top: -.5rem;
+            left: .8rem;
+            font-size: .75rem;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        .formi:focus{
+            border: 1.5px solid coral;
+        }
+
+        h1{
+            color: orange;
+            justify-content: center;
+        }
+
+        p{
+            font-size: 1rem;
+            font-weight: 800;
+        }
+   </style>
+</head>
+    <body>
+
+        <script>
+            function valid( ) 
+            {
+                var email=document.myform.email.value;
+                var password=document.myform.pass.value;
+                var phone=document.myform.phno.value;
+
+                var atpos=email.indexOf("@");
+                var dotpos= email.lastIndexOf(".");
+
+                if(email==null || email == "")
+                {
+                    alert("Email cannot be blank ");
+                    return false;
+                }
+
+                else if(phone.length < 10 )
+                {
+                    alert("Number cannot be less than 10 numbers ");
+                    return false;
+                }
+
+                else if(phone.length > 10 )
+                {
+                    alert("Number cannot be more  than 10 numbers ");
+                    return false;
+                }
+
+                else if(password.length<6)
+                {
+                    alert("Password should be more than 6 characters ");
+                    return false;
+                }
+
+                else if( atpos<1 || dotpos<atpos+2 || dotpos+2 >= email.length)
+                {
+                    alert("Please enter a valid email address")
+                    return false;
+                }
+
+                else{
+                    alert("Registration Succesful data stored succesfully ");
+                }
+            }
+        </script>
+        <div>
+            <nav>
+                <ul class="heading" >
+                    <li><a href="index.html"><img src="logo.jpg" style="width:110px;height:25px;"></a></li>
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="register.html">Register  </a></li>
+                    <li><a href="notifications.html">Notifications  </a></li>
+                    <li><a href="placement.html">Placment details </a></li>
+                    <li><a href="digital.html">Digital library </a></li>
+                    <li><a href="contact.html">Contact us  </a></li>
+                </ul>
+            </nav>
+        </div>
+
+<!--
+       content  
+-->
+
+<h1>NOTE:</h1>
+    <p>
+        The above information will be used to receive updates from your collage, 
+        Enter the collage provided email id and its password 
+        <br>
+        Enter the mobile number through which you wish to recieve updates
+    </p>
+
+    <br>
+        The type of information you will be receiving are <br>
+        <ul>
+            <li>Weekly attendance </li>
+            <li>Results when available </li>
+            <li>Important notices </li>
+        </ul>
+
+            <div class="body">
+                <!-- code inside this div -->
+                <form class="form" name="myform" onsubmit="return valid();">
+                    <h2 class="title">REGISTER</h2>
+                    
+                    <div class="formd">
+                            <input type="text" class="formi" placeholder=" " name="email" >
+                            <label for=" " class="forml ">Email</label>
+                    </div>
+
+                    <div class="formd">
+                            <input type="password" class="formi" placeholder=" " name="pass" >
+                            <label for=" " class="forml ">Password</label>
+                    </div>
+
+                    <div class="formd">
+                            <input type="number" class="formi" placeholder=" " name="phno" >
+                            <label for=" " class="forml ">Number</label>
+                    </div>
+
+                    <input type="submit" class="formb" value="Register">
+                </form>
+            </div>
+
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer">
+                        <div class="footer-heading footer-1">
+                                <h2>Useful Information </h2>
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSccR1Uayj6I9i7uzFEa9rrR3LBg_hehKPRMLdXvuhGgyfx32g/viewform">Resume Generator </a>
+                                    <a href="http://www.geethanjaliinstitutions.com/engineering/img/downloads/B.Tech%20Academic%20Calendar%20II,%20III&IV%20year%202021-22.pdf">Acadamic Calender</a>
+                                    <a href="https://www.gctcportal.in/p/syllabus.html">Syllabus  </a>
+                                    <a href="https://www.gctcportal.in/p/fee-particulars.html">Fee particulars </a>
+                                    <a href="https://www.gctcportal.in/p/programmes-offered-by-college.html">Intake </a>
+                                    <a href="https://www.gctcportal.in/p/library.html">Library zone </a>
+                                    <a href="https://www.gctcportal.in/p/academic-overview.html">Academic Overiew </a>
+                        </div>
+
+                        <div class="footer-heading footer-2">
+                            <h2>Reference sites </h2>
+                                <a href="https://geethanjaliinstitutions.com/">Geetanjali institution </a>
+                                <a href="https://jntuh.ac.in/">JNTU Hyderabad </a>
+                        </div>
+
+
+                        <div class="footer-heading footer-3" align="center">
+                            <h2>Social media  </h2>
+                                <ul>
+                                    <li class="list">
+                                        <a class="social"href="https://www.facebook.com/groups/gctcportal " target="_blank">
+                                            <ion-icon name="logo-facebook"></ion-icon>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list">
+                                        <a href="https://www.youtube.com/user/GCTCPORTAL" target="_blank" >
+                                            <ion-icon name="logo-youtube"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="https://www.instagram.com/accounts/login/?next=/gctcportal/" target="_blank">
+                                            <ion-icon name="logo-instagram"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="https://twitter.com/GCTCPORTAL" target="_blank">
+                                            <ion-icon name="logo-twitter"></ion-icon>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
